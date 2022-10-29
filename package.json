@@ -1,0 +1,52 @@
+{
+  "name": "sails-hook-cronjob",
+  "version": "1.0.3",
+  "description": "Sails hook for running tasks by cron",
+  "license": "MIT",
+  "main": "src/index.js",
+  "author": {
+    "email": "daniel.rataj@centrum.cz",
+    "name": "Daniel Rataj",
+    "url": "https://www.linkedin.com/in/danielrataj/"
+  },
+  "sails": {
+    "isHook": true
+  },
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run test",
+    "test": "istanbul cover _mocha",
+    "lint": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:danielrataj/sails-hook-cronjob.git"
+  },
+  "keywords": [
+    "sails",
+    "hook",
+    "cron"
+  ],
+  "bugs": {
+    "url": "https://github.com/danielrataj/sails-hook-cronjob/issues"
+  },
+  "homepage": "https://github.com/danielrataj/sails-hook-cronjob#readme",
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.26.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^10.1.0",
+    "sails": "^1.5.3",
+    "sinon": "^14.0.1"
+  },
+  "dependencies": {
+    "cron": "^2.1.0"
+  }
+}
