@@ -50,14 +50,14 @@ describe('sails-hook-cronjob', () => {
   });
 
   it('Should properly load cron hook', () => {
-    assert.isObject(sails.config.cron);
-    assert.isObject(sails.hooks.cron);
+    assert.isObject(sails.config.cronjob);
+    assert.isObject(sails.hooks.cronjob);
   });
 
   it('Should properly load cron tasks', () => {
-    const firstJob = sails.hooks.cron.jobs.firstJob;
-    const secondJob = sails.hooks.cron.jobs.secondJob;
-    const contextJob = sails.hooks.cron.jobs.contextJob;
+    const firstJob = sails.hooks.cronjob.jobs.firstJob;
+    const secondJob = sails.hooks.cronjob.jobs.secondJob;
+    const contextJob = sails.hooks.cronjob.jobs.contextJob;
 
     assert.isUndefined(firstJob.onComplete);
     assert.equal(firstJob.cronTime.source, '* * * * * 1');
