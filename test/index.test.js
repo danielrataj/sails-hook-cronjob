@@ -68,6 +68,7 @@ describe('sails-hook-cronjob', () => {
     assert.equal(secondJob.cronTime.source, '* * * * * 1');
     assert.equal(secondJob.cronTime.zone, 'Europe/Kiev');
     assert.notOk(secondJob.running);
+    // assert.isFunction(secondJob.guard);
 
     assert.equal(contextJob.cronTime.source, '* * * * * *');
   });

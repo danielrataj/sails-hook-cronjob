@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-cronjob",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Sails hook for running tasks by cron",
   "license": "MIT",
   "main": "src/index.js",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run lint && npm run test",
-    "test": "istanbul cover _mocha",
+    "test": "nyc _mocha",
     "lint": "eslint --fix ."
   },
   "repository": {
@@ -41,10 +41,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^5.0.0",
-    "istanbul": "^0.4.5",
     "mocha": "^10.1.0",
     "sails": "^1.5.3",
-    "sinon": "^14.0.1"
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "cron": "^2.1.0"
