@@ -128,6 +128,23 @@ module.exports.cronjob = {
 };
 ```
 
+You can also use the "guard" feature to allow/deny cronjob from running. It is useful for example when you want to run a cronjob only on a specific environment (backend workers, etc.):
+
+```javascript
+// config/cronjob.js
+module.exports.cronjob = {
+  myJob: {
+    guard: async () => {
+      return true
+    },
+    schedule: '* * * * * *',
+    onTick: function() {
+      console.log('I am triggering when time is come');
+    }
+  }
+};
+```
+
 ## Context
 
 There are three states for the context, i.e. this on `onTick` call:
